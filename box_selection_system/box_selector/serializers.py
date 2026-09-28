@@ -10,3 +10,9 @@ class BoxSerializer(serializers.ModelSerializer):
     class Meta:
         model = Box
         fields = '__all__'
+
+class BoxRecommendationSerializer(serializers.Serializer):
+    product_ids = serializers.ListField(
+        child=serializers.IntegerField(min_value=1),
+        allow_empty=False
+    )
