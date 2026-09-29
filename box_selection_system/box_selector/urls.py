@@ -9,6 +9,6 @@ router.register('box',BoxViewSet,basename='boxes')
 
 
 urlpatterns = [
-    path('',include(router.urls)),
+    path('api/',include(router.urls)),
 
 ]

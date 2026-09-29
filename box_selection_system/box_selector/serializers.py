@@ -13,6 +13,6 @@ class BoxSerializer(serializers.ModelSerializer):
 
 class BoxRecommendationSerializer(serializers.Serializer):
     product_ids = serializers.ListField(
-        child=serializers.IntegerField(min_value=1),
+        child=serializers.IntegerField(),
         allow_empty=False
     )
